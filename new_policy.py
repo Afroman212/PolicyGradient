@@ -133,7 +133,6 @@ for i in range(numberofepisodes):
     alltrainX = np.vstack([alltrainX, trainX])
     alltrainY = np.vstack([alltrainY, trainY])
 
-    # print(trainX, trainY, advantage)
     tempalltrainY = np.insert(alltrainY, 5, alladvantages, axis=1)
     model.train_on_batch(alltrainX, tempalltrainY)
-    # print(totreward)
+    print(modelaction)
